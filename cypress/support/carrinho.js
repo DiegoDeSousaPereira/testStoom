@@ -28,6 +28,7 @@ Cypress.Commands.add('continuarCompra', () => {
 
 });
 Cypress.Commands.add('cadastroCompra', () => {
+    cy.intercept('GET', 'https://services-alpha.tendaatacado.com.br/address/autocomplete/*').as('requestCep')
     cy.get('#gender').last().click();    
     cy.get('[data-cy="inpt-text-day"]').type('08');
     cy.get('[data-cy="inpt-text-month"]').type('08');
@@ -37,6 +38,9 @@ Cypress.Commands.add('cadastroCompra', () => {
     cy.get('#addressLine2').type('teste')
     cy.get('#number').type('100')
     cy.get('#reference').type('teste')
+    cy.wait('@requestCep').then((interception) => {
+        expect(interception.response.statusCode).to.eq(200);
+    });
     cy.contains('Finalizar sua conta no Tenda Atacado').click();
 });
 
