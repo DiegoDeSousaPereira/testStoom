@@ -45,6 +45,9 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
+          if [ -z "${GITHUB_RUN_URL}" ]; then
+            GITHUB_RUN_URL="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          fi
           curl -X POST -H 'Content-type: application/json' \
-          --data "{\"text\":\"⚠️ O job *Cypress Tests* falhou no commit: ${GITHUB_SHA} no projeto: ${GITHUB_REPOSITORY}. Verifique os relatórios de teste em: ${GITHUB_RUN_URL}\"}" \
+          --data "{\"text\":\"⚠️ O job *Cypress Tests* falhou no commit: <${GITHUB_SHA}|${GITHUB_SHA}> no projeto: ${GITHUB_REPOSITORY}. Verifique os relatórios de teste em: <${GITHUB_RUN_URL}|Clique aqui para ver os detalhes>\", \"icon_url\": \"https://example.com/automation-icon.png\"}" \
           $SLACK_WEBHOOK_URL
