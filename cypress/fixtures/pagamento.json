@@ -1,0 +1,6 @@
+{
+    "boleto": "Boleto bancário",
+    "cartao": "Cartão de crédito",
+    "numeroCartao": "4000000000000010",
+    "numeroCartaoInvalido" : "9010200300500010"
+}

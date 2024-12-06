@@ -1,0 +1,16 @@
+{
+  "name": "testeStoom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Diego de Sousa Pereira",
+  "license": "MIT",
+  "devDependencies": {
+    "cpf-cnpj-validator": "^1.0.3",
+    "cypress": "^13.16.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
