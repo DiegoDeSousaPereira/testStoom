@@ -23,11 +23,11 @@ Cypress.Commands.add('buscarCodigoEnviado', (tentativas = 3) => {
         });
 });
 
-
 Cypress.Commands.add('validarTextoVisivel', (texto) => {
     cy.contains(texto)
         .should('be.visible')
 });
+
 Cypress.Commands.add('validarTextoNaoVisivel', (texto) => {
     cy.contains(texto)
         .should('not.exist')

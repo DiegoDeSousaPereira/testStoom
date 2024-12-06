@@ -34,7 +34,6 @@ Cypress.Commands.add('finalizarCadastro', () => {
     cy.get('.btn-create-account').click();
 });
 
-
 Cypress.Commands.add('login', (senha) => {
     cy.visit('/')
     cy.get('[src="/assets/svg/ico_close_with_circle.svg"]').last().click()

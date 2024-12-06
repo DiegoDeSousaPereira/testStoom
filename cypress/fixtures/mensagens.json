@@ -7,8 +7,6 @@
     "loginSucesso": "Olá, Teste",
     "itemCarrinho": "Item no carrinho",
     "carrinhoVazio": "Seu carrinho ainda está vazio",
-    "pedidoConcluido": "Seu pedido foi realizado com sucesso :)"
-
+    "pedidoConcluido": "Seu pedido foi realizado com sucesso :)",
+    "cartaoInvalido": "Cartão inválido"
 }
-  
-  
