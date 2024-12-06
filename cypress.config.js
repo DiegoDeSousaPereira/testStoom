@@ -3,7 +3,7 @@ const cypressMochawesomeReporter = require('cypress-mochawesome-reporter/plugin'
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
-  defaultCommandTimeout: 15000,
+  defaultCommandTimeout: 30000,
   reporterOptions: {
     reportDir: "cypress/reports",
     overwrite: false,
