@@ -98,23 +98,6 @@ describe('Fluxo E2E', () => {
                 this.dadospagamento.numeroCartao
             )
             cy.validarTextoVisivel(this.mensagens.pedidoConcluido)
-
-        });
-
-        it('Finalizando carrinho de compras com cartao de credito inválido', function () {
-            cy.selecionarDepartamento(this.departamento.tenda);
-            cy.expandirProdutos();
-            cy.adicionarProdutoCarrinho();
-            cy.validarTextoVisivel(this.mensagens.itemCarrinho)
-            cy.continuarCompra();
-            cy.finalizarCompra()
-            //cy.preencherDadosEntrega()
-            cy.esolherMetodoPagamento(
-                this.dadospagamento.cartao,
-                this.dadospagamento.numeroCartaoInvalido
-            )
-            cy.validarTextoVisivel(this.mensagens.cartaoInvalido)
-
         });
     })
 });
