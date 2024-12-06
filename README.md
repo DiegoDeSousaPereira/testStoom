@@ -83,7 +83,7 @@ Essa abordagem mantém o projeto modular e facilita sua escalabilidade, melhoran
 
 ### 🔄 Integração Contínua (CI)
 
-Este projeto utiliza **GitHub Actions** para automação da pipeline de testes. A configuração no arquivo `github/workflows/cypress-tests.yml` permite que os testes Cypress sejam executados em cada push na branch `main`, ao abrir um merge request e diariamente às 09:00.
+Este projeto utiliza **GitHub Actions** para automação da pipeline de testes. A configuração no arquivo `github/workflows/cypress-tests.yml` permite que os testes Cypress sejam executados em cada push na branch `master`, ao abrir um merge request ou diariamente às 09:00.
 
 **Pipeline de Testes Cypress**:
 - **Imagem Docker**: Utiliza a imagem `cypress/base:18.16.0`, pré-configurada com Cypress e Node 18.
