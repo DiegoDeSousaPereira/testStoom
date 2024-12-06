@@ -108,7 +108,7 @@ describe('Fluxo E2E', () => {
             cy.validarTextoVisivel(this.mensagens.itemCarrinho)
             cy.continuarCompra();
             cy.finalizarCompra()
-            cy.preencherDadosEntrega()
+            //cy.preencherDadosEntrega()
             cy.esolherMetodoPagamento(
                 this.dadospagamento.cartao,
                 this.dadospagamento.numeroCartaoInvalido
